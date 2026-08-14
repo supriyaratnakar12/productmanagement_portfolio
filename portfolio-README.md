@@ -25,8 +25,9 @@ A 0-to-1 product strategy exercise: building a self-service e-commerce platform 
 
 **Skills demonstrated:** Product vision, stakeholder mapping, quantitative prioritization, phased roadmap sequencing, technical trade-off evaluation
 
-### 📊 Case Study 2: Inventory & Stock Visibility — Product Discovery
-*(Coming soon)* A discovery-focused case study on solving stock visibility problems across manufacturing labs — from clarifying questions to a reusable product discovery framework.
+
+### 📊 [Case Study 2: Inventory & Stock Visibility — Product Discovery](./case-study-2-inventory-discovery) 
+A discovery-focused case study on solving stock visibility problems across manufacturing labs — from clarifying questions to a reusable product discovery framework.
 
 **Skills demonstrated:** Discovery interviewing, stakeholder questioning frameworks, MVP identification
 
