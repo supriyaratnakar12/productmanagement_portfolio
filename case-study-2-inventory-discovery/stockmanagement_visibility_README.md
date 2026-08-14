@@ -58,9 +58,11 @@ Rather than asking scattered questions, I organized discovery around a repeatabl
 - **If we could solve only one inventory problem first, which would create the biggest impact?** — This question was used specifically to identify the Minimum Viable Product (MVP).
 
 ## 3. Product Vision Discovery Framework
-To make this discovery process repeatable across future initiatives, I distilled it into a reusable framework:
+To make this discovery process repeatable across future initiatives, I distilled it into a 4-stage framework that moves from context to a measurable future state:
 
-![Product Vision Discovery Framework](images/discovery_framework.png)
+![Product Vision Discovery Framework](images/discovery_framework_flow.png)
+
+The framework is designed to be walked left to right in a stakeholder conversation: establish **context** before diagnosing the **current state**, surface **problems** only once the current state is understood (to avoid jumping to solutions), and close on a **future state** with a way to measure success — which is what makes the final "if we could solve only one problem first" question so effective, since by that point the real priorities are already visible.
 
 ## Why This Approach
 Rather than starting with "what feature should we build," this discovery process deliberately front-loads three things:
