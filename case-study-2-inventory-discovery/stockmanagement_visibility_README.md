@@ -70,8 +70,63 @@ Rather than starting with "what feature should we build," this discovery process
 2. **Structured, themed questioning** — so nothing critical (compliance, regional variance, existing workarounds) gets missed
 3. **A single MVP-forcing question** — "if we could solve only one problem first" — to avoid scope creep before a solution is even defined
 
+---
+
+## From Discovery to Roadmap
+*The sections below extend the discovery findings above into a prioritized product plan — the natural next step after this research.*
+
+## 4. Stakeholder Pain Point Matrix
+Mapped pain points by stakeholder group to make sure the solution served everyone who touches inventory, not just the loudest voice:
+
+![Stakeholder Pain Point Matrix](images/cs2_pain_point_matrix.png)
+
+## 5. Prioritization Framework (RICE-style)
+Scored candidate features using the same RICE model as Case Study 1, so priorities are ranked by evidence rather than opinion:
+
+![RICE Prioritization](images/cs2_rice_prioritization.png)
+
+Low-stock & expiry alerts scored highest (6.0) — the discovery interviews consistently linked this directly to real business pain (stockouts, expired batches). Automated data sync scored lowest (1.7) on its own merits, but it's a **dependency**: the dashboard and alerts can't be reliable without a real data feed, so it's sequenced first despite the lower score — the same "foundation before features" logic used in Case Study 1.
+
+## 6. Roadmap
+![Roadmap Timeline](images/cs2_roadmap_timeline.png)
+
+| Phase | Focus | RICE Score |
+|---|---|---|
+| Phase 1 — Foundation | Automated data sync from lab systems | 1.7 |
+| Phase 2 — MVP | Centralized, real-time stock dashboard | 5.0 |
+| Phase 3 — Proactive | Low-stock and expiry alerts | 6.0 |
+| Backlog | Cross-lab search & reporting | 4.0 |
+
+## 7. Options Considered
+| Option | Description | Trade-off |
+|---|---|---|
+| Option 1 | Lightweight dashboard fed by manual exports from each lab's existing spreadsheets | Fast to build, but not real-time and still depends on manual uploads |
+| Option 2 | Full ERP rollout (e.g. SAP) standardized across every lab | Solves the problem long-term, but high cost, long timeline, disruptive to labs already mid-process |
+| Option 3 | **Selected** — Integration layer that syncs data from each lab's existing system (Excel, ERP, manual logs) into one real-time dashboard | Doesn't require ripping out lab systems already in use; faster time-to-value while still solving the core visibility gap |
+
+**Decision: Option 3** — meets labs where they are today instead of forcing a disruptive standardization project before any value is delivered.
+
+## 8. User Stories
+- **As a lab technician**, I want to see real-time stock levels across all labs, so I can check availability without calling around.
+- **As a production planner**, I want low-stock alerts, so I can reorder materials before a stockout happens.
+- **As a regional/warehouse manager**, I want expiry tracking, so I can redistribute or use stock before it's wasted.
+- **As a quality/compliance officer**, I want centralized batch traceability, so audits don't require chasing down scattered logs.
+
+## Outcome / Projected Impact
+*(Framed as projected impact from a discovery/concept exercise — flag clearly if this was applied to a live project.)*
+
+| Metric | Before | Target After Phase 3 | Why |
+|---|---|---|---|
+| Stock visibility | No shared visibility; manual calls/emails between labs | Real-time cross-lab dashboard | Directly addresses the core discovery finding |
+| Stockout incidents | Reactive, discovered after the fact | Reduced via proactive alerts | Alerts trigger before stock runs out |
+| Expired/dead stock | Discovered too late to use or redistribute | Tracked and flagged before expiry | Enables redistribution instead of waste |
+| Manual stock-check effort | High — phone calls, emails, spreadsheets | Self-serve dashboard | Removes the manual workaround entirely |
+| Planning cycle time | Slowed by manual data gathering | Faster, data-driven decisions | Centralized reporting replaces ad hoc checks |
+
 ## Key Takeaways
 - Discovery started with a hypothesis stated explicitly ("today there is no stock visibility"), not an assumption baked silently into requirements
 - Mapped process variation across labs *before* proposing a solution, avoiding a one-size-fits-all design for a genuinely fragmented process
-- Built a reusable discovery framework (15 guiding questions across 15 themes) that can be applied to future product areas, not just this one
+- Built a reusable discovery framework (4-stage flow across 15 guiding questions) that can be applied to future product areas, not just this one
 - Used a single forcing question to identify the MVP rather than trying to scope everything at once
+- Prioritized with RICE, but overrode pure score ranking to sequence a lower-scoring foundational dependency (data sync) first — mirroring the same "infrastructure before features" logic applied in Case Study 1
+- Chose an integration-layer approach over a full ERP rollout to deliver value faster without disrupting labs' existing workflows
