@@ -66,7 +66,7 @@ Supporting stories:
 - **Shipment Tracking** — both sellers and buyers can track shipment status
 
 ## Outcome / Projected Impact
-*(Framed as projected impact — flag clearly if this was a concept project rather than a shipped one.)*
+
 
 | Metric | Before | Target After Phase 3 | Why |
 |---|---|---|---|
